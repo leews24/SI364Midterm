@@ -3,15 +3,26 @@
 # List of routes
 
 / -> index.html
+
 /names -> name_example.html
+
 /pokemon_enter -> pokemon_enter.html
+
 /pokemon_error -> pokemon_error.html
+
 /pokemon_data -> pokemon_data.html
+
 /pokemon_data/<pokemon> -> pokemon_detail.html
+
 /color_history -> pokemon_color_history.html
+
 /pokemon_history -> pokemon_history.html
+
 /weather -> weather.html
+
 /weather_history -> weather_history.html
+
+
 
 # Description of what this does
 The app allows uers to input a single word name. It will save it in a database which can be viewed later.
