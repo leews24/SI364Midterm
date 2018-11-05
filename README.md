@@ -33,6 +33,9 @@ The appl also allows users to input a zipcode. This will return the location's n
 
 
 
+
+
+
 #Code Requirements
 
 **Ensure that the SI364midterm.py file has all the setup (app.config values, import statements, code to run the app if that file is run, etc) necessary to run the Flask application, and the application runs correctly on http://localhost:5000 (and the other routes you set up)**
