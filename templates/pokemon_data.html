@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content1 %}
+
+{% if color != "Black" %}
+<h1 style = "color:{{ color }}; -webkit-text-stroke: 1px black;">All pokemon with the {{ color }} color:</h1>
+{% else %}
+<p>The following text has no strokes.</p>
+<h1>All pokemon with the {{ color }} color:</h1>
+{% endif %}
+
+<ul>
+{% for x in objects %}
+<li> <h2 style="display: inline"> {{ x["name"] }}</h2> ---------- <a href= "http://localhost:5000/pokemon_data/{{x['name']}}" style="display: inline">Learn more</a> </li>
+{% endfor %}
+</ul>
+
+{% endblock %}

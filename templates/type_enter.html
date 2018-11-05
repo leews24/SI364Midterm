@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content1 %}
+
+<form action="{{ url_for('type_data') }}" method="POST">
+    {{ form.pokemon.label() }}{{ form.pokemon() }}<br>
+    {{ form.submit() }}
+    {{ form.hidden_tag() }}
+</form>
+
+{% endblock %}

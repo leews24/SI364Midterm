@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content1 %}
+
+<p>(100 points) Include an additional model class (to make at least 3 total in the application) with at least 3 columns. Save data to it AND query data from it; use the data you query in a view-function, and as a result of querying that data, something should show up in a view. (The data itself should show up, OR the result of a request made with the data should show up.)</p>
+
+<form action="{{ url_for('weather') }}" method="POST">
+  {{ form.location.label() }}{{ form.location() }}<br>
+  {{ form.submit() }}
+</form>
+
+{% if results == None %}
+Enter a zipcode to see current weather!
+
+{% else %}
+<ul>
+<li>Location: {{ results['name'] }} </br> </li>
+<li>Temperature(Kelvin): {{ results['main']['temp'] }} K</br> </li>
+<li>Pressure: {{ results['main']['pressure'] }} hpa</br> </li>
+<li>Humidity: {{ results['main']['humidity'] }} %</br> </li>
+</ul>
+{% endif %}
+
+
+{% endblock %}

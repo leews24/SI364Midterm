@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content1 %}
+
+<h1>Colors that have been explored:</h1>
+<h2>This list may not have more than 10 colors.</h2>
+<h2>While a user is allowed to submit duplicate data to the form, the app will not save duplicate data.</h2>
+
+<ol>
+{% for color in colors %}
+    <li>{{ color }}</li>
+{% endfor %}
+</ol>
+
+{% endblock %}

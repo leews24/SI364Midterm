@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content1 %}
+
+<h1>Locations that have been searched for weather:</h1>
+<h2>This search log (unlike the color search history) will save all duplicate searches.</h2>
+
+<ol>
+{% for loc in weather %}
+    <li>{{ loc.location }}</li>
+{% endfor %}
+</ol>
+
+{% endblock %}

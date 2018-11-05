@@ -1,12 +1,30 @@
+<!doctype html>
+<html>
+  <body>
+    <div id="nav">
+        <ul>
+            <li><a href="{{ url_for('home') }}">Home</a></li>
+            <li><a href="{{ url_for('all_names') }}">All Names</a></li>
+            <li><a href="{{ url_for('pokemon_enter') }}">Enter Pokemon Color</a></li>
+            <li><a href="/pokemon_data?color=Red">All Red Pokemon</a></li>
+            <li><a href="/pokemon_data/Charmander">Details on the Pokemon, Charmander</a></li>
+            <li><a href="{{ url_for('color_history') }}">Color Search History</a></li>
+            <li><a href="{{ url_for('pokemon_history') }}">Pokemon Search History</a></li>
+            <li><a href="{{ url_for('weather') }}">Weather</a></li>
+            <li><a href="{{ url_for('weather_history') }}">Weather Search History</a></li>
+        </ul>
+    </div>
+    <div id="content">
+      {% block content1 %}
 
+      {% endblock %}
+    </div>
 
-{% block content1 %}
+    <div id="footer">
+      {% block footer %}
+      <p>This is the end of the page.</p>
+      {% endblock %}
+    </div>
 
-<form action="{{ url_for('home') }}" method="POST">
-    {{ form.name.label() }}{{ form.name() }}<br>
-    {{ form.submit() }}
-    {{ form.hidden_tag() }}
-</form>
-
-
-{% endblock %}
+  </body>
+</html>

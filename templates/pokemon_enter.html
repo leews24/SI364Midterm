@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content1 %}
+
+<form action="{{ url_for('pokemon_data') }}" method="GET">
+    {{ form.color.label() }}{{ form.color() }}<br>
+    {{ form.submit() }}
+    {{ form.hidden_tag() }}
+</form>
+
+<p>If you don't know what to type, try 'red'.</p>
+
+{% endblock %}
